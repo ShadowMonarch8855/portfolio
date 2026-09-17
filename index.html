@@ -3,925 +3,931 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Professional fresher portfolio showcasing web development skills, projects, and contact information.">
-    <title>Portfolio | Aspiring Software Developer</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pikki Solomon - Full-Stack Developer & MCA Candidate specializing in MERN Stack, RESTful APIs, and responsive web applications with foundational Java & Python.">
+    <meta name="keywords" content="Pikki Solomon, Full-Stack Developer, MERN Developer, MCA, React.js, Node.js, Express.js, MongoDB, PostgreSQL, Java, Python, REST APIs, LMS, Portfolio">
+    <meta name="author" content="Pikki Solomon">
+    <meta name="theme-color" content="#02040a">
+
+    <!-- Open Graph Meta -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Pikki Solomon | Full-Stack Developer & MCA Candidate">
+    <meta property="og:description" content="Explore production MERN applications, LMS project with PostgreSQL database, technical skill matrix, and professional experience of Pikki Solomon.">
+
+    <title>Pikki Solomon | Full-Stack Developer & MCA Candidate</title>
+
+    <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-         :root {
-            --primary: #1e90ff;
-            --primary-dark: #0d6efd;
-            --bg-dark: #23272f;
-            --bg-card: #1e222b;
-            --text-light: #e8eaed;
-            --text-muted: #a0a6b0;
-            --border: #2f3542;
-            --gradient: linear-gradient(135deg, #1e90ff 0%, #0d6efd 100%);
-            --shadow: 0 8px 32px rgba(30, 144, 255, 0.12);
-            --shadow-hover: 0 16px 48px rgba(30, 144, 255, 0.25);
-        }
-        
-        * {
-            box-sizing: border-box;
-        }
-        
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 80px;
-        }
-        
-        body {
-            background: var(--bg-dark);
-            min-height: 100vh;
-            font-family: 'Poppins', 'Segoe UI', sans-serif;
-            color: var(--text-light);
-            overflow-x: hidden;
-            line-height: 1.7;
-        }
-        /* ====== NAVBAR ====== */
-        
-        .navbar {
-            background: rgba(35, 39, 47, 0.95) !important;
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border);
-            padding: 1rem 0;
-            transition: all 0.3s ease;
-            z-index: 1000;
-        }
-        
-        .navbar.scrolled {
-            box-shadow: var(--shadow);
-            padding: 0.6rem 0;
-        }
-        
-        .navbar-brand {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--text-light) !important;
-            letter-spacing: 1px;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .navbar-brand span {
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .nav-link {
-            color: var(--text-muted) !important;
-            font-weight: 500;
-            font-size: 0.95rem;
-            margin: 0 0.5rem;
-            transition: color 0.3s ease;
-            position: relative;
-            padding: 0.5rem 0.75rem !important;
-        }
-        
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0.75rem;
-            right: 0.75rem;
-            height: 2px;
-            background: var(--gradient);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-            border-radius: 2px;
-        }
-        
-        .nav-link:hover,
-        .nav-link.active {
-            color: var(--primary) !important;
-        }
-        
-        .nav-link:hover::after,
-        .nav-link.active::after {
-            transform: scaleX(1);
-        }
-        
-        .navbar-toggler {
-            border: 1px solid var(--border);
-            padding: 0.4rem 0.6rem;
-        }
-        
-        .navbar-toggler-icon {
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(30, 144, 255, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-        }
-        /* ====== HERO / ABOUT ====== */
-        
-        .hero-section {
-            padding: 6rem 0 4rem;
-            position: relative;
-        }
-        
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 400px;
-            background: radial-gradient(ellipse at center, rgba(30, 144, 255, 0.08) 0%, transparent 70%);
-            pointer-events: none;
-        }
-        
-        .profile-img-wrapper {
-            position: relative;
-            display: inline-block;
-            margin-bottom: 2rem;
-        }
-        
-        .profile-img {
-            width: 180px;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 4px solid var(--primary);
-            box-shadow: var(--shadow);
-            position: relative;
-            z-index: 2;
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
-        }
-        
-        .profile-img-wrapper:hover .profile-img {
-            transform: scale(1.05);
-            box-shadow: var(--shadow-hover);
-        }
-        
-        .profile-img-wrapper::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            background: var(--gradient);
-            opacity: 0.15;
-            z-index: 1;
-            animation: pulse 2s ease-in-out infinite;
-        }
-        
-        @keyframes pulse {
-            0%,
-            100% {
-                transform: translate(-50%, -50%) scale(1);
-                opacity: 0.15;
-            }
-            50% {
-                transform: translate(-50%, -50%) scale(1.1);
-                opacity: 0.05;
-            }
-        }
-        
-        .hero-name {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--text-light);
-            margin-bottom: 0.5rem;
-            letter-spacing: 1px;
-        }
-        
-        .hero-role {
-            font-size: 1.15rem;
-            color: var(--primary);
-            font-weight: 500;
-            margin-bottom: 1.25rem;
-            letter-spacing: 0.5px;
-        }
-        
-        .hero-bio {
-            font-size: 1.05rem;
-            color: var(--text-muted);
-            max-width: 650px;
-            margin: 0 auto 1.75rem;
-        }
-        
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-        
-        .social-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.6rem 1.25rem;
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 50px;
-            color: var(--text-light);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-        }
-        
-        .social-link:hover {
-            background: var(--primary);
-            border-color: var(--primary);
-            color: #fff;
-            transform: translateY(-3px);
-            box-shadow: var(--shadow);
-        }
-        
-        .social-link i {
-            font-size: 1.1rem;
-        }
-        /* ====== SECTIONS ====== */
-        
-        .section {
-            padding: 4rem 0;
-        }
-        
-        .section-title {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--text-light);
-            margin-bottom: 0.75rem;
-            letter-spacing: 1px;
-            position: relative;
-            display: inline-block;
-        }
-        
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 0;
-            width: 60px;
-            height: 4px;
-            background: var(--gradient);
-            border-radius: 2px;
-        }
-        
-        .section-subtitle {
-            color: var(--text-muted);
-            font-size: 1rem;
-            margin-bottom: 2.5rem;
-        }
-        /* ====== SKILLS ====== */
-        
-        .skill-tag {
-            display: inline-block;
-            background: var(--bg-card);
-            color: var(--text-light);
-            border: 1px solid var(--border);
-            border-radius: 50px;
-            padding: 0.5rem 1.25rem;
-            margin: 0.35rem;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            cursor: default;
-        }
-        
-        .skill-tag:hover {
-            background: var(--primary);
-            border-color: var(--primary);
-            color: #fff;
-            transform: translateY(-2px);
-            box-shadow: var(--shadow);
-        }
-        /* ====== PROJECT CARDS ====== */
-        
-        .project-card {
-            background: var(--bg-card);
-            border-radius: 16px;
-            border: 1px solid var(--border);
-            padding: 1.75rem;
-            height: 100%;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .project-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: var(--gradient);
-            transform: scaleX(0);
-            transition: transform 0.4s ease;
-            transform-origin: left;
-        }
-        
-        .project-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-hover);
-            border-color: var(--primary);
-        }
-        
-        .project-card:hover::before {
-            transform: scaleX(1);
-        }
-        
-        .project-icon {
-            width: 48px;
-            height: 48px;
-            background: rgba(30, 144, 255, 0.1);
-            border-radius: 12px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary);
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .project-card h5 {
-            color: var(--text-light);
-            font-weight: 600;
-            font-size: 1.15rem;
-            margin-bottom: 0.75rem;
-        }
-        
-        .project-card p {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            margin-bottom: 1.25rem;
-        }
-        
-        .project-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: color 0.3s ease;
-        }
-        
-        .project-link:hover {
-            color: var(--primary-dark);
-        }
-        
-        .project-link i {
-            transition: transform 0.3s ease;
-        }
-        
-        .project-link:hover i {
-            transform: translate(3px, -3px);
-        }
-        /* ====== STATS ====== */
-        
-        .stat-card {
-            text-align: center;
-            padding: 1.5rem 1rem;
-            background: var(--bg-card);
-            border-radius: 12px;
-            border: 1px solid var(--border);
-            transition: all 0.3s ease;
-        }
-        
-        .stat-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow);
-            border-color: var(--primary);
-        }
-        
-        .stat-number {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 0.25rem;
-        }
-        
-        .stat-label {
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        /* ====== CONTACT FORM ====== */
-        
-        .contact-card {
-            background: var(--bg-card);
-            border-radius: 16px;
-            border: 1px solid var(--border);
-            padding: 2rem;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        .form-label {
-            color: var(--text-light);
-            font-weight: 500;
-            font-size: 0.9rem;
-            margin-bottom: 0.4rem;
-        }
-        
-        .form-control {
-            background: var(--bg-dark);
-            color: var(--text-light);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 0.75rem 1rem;
-            font-family: inherit;
-            transition: all 0.3s ease;
-        }
-        
-        .form-control:focus {
-            background: var(--bg-dark);
-            border-color: var(--primary);
-            box-shadow: 0 0 0 0.2rem rgba(30, 144, 255, 0.15);
-            color: var(--text-light);
-            outline: none;
-        }
-        
-        .form-control::placeholder {
-            color: var(--text-muted);
-            opacity: 0.7;
-        }
-        
-        .btn-submit {
-            background: var(--gradient);
-            border: none;
-            color: #fff;
-            font-weight: 600;
-            padding: 0.75rem 2.5rem;
-            border-radius: 50px;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
-            box-shadow: var(--shadow);
-            font-family: inherit;
-            font-size: 1rem;
-        }
-        
-        .btn-submit:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-hover);
-            background: var(--gradient);
-            color: #fff;
-        }
-        
-        .btn-submit:active {
-            transform: translateY(0);
-        }
-        
-        .form-feedback {
-            display: none;
-            padding: 1rem;
-            border-radius: 8px;
-            margin-top: 1rem;
-            text-align: center;
-            font-weight: 500;
-        }
-        
-        .form-feedback.success {
-            display: block;
-            background: rgba(25, 135, 84, 0.1);
-            border: 1px solid rgba(25, 135, 84, 0.4);
-            color: #75b798;
-        }
-        /* ====== FOOTER ====== */
-        
-        footer {
-            background: rgba(30, 39, 43, 0.6);
-            border-top: 1px solid var(--border);
-            color: var(--text-muted);
-            padding: 2rem 0;
-            font-size: 0.9rem;
-        }
-        
-        footer a {
-            color: var(--primary);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-        footer a:hover {
-            color: var(--primary-dark);
-            text-decoration: underline;
-        }
-        /* ====== ANIMATIONS ====== */
-        
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.7s ease, transform 0.7s ease;
-        }
-        
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .delay-1 {
-            transition-delay: 0.1s;
-        }
-        
-        .delay-2 {
-            transition-delay: 0.2s;
-        }
-        
-        .delay-3 {
-            transition-delay: 0.3s;
-        }
-        
-        .delay-4 {
-            transition-delay: 0.4s;
-        }
-        /* ====== RESPONSIVE ====== */
-        
-        @media (max-width: 767.98px) {
-            .hero-section {
-                padding: 5rem 0 3rem;
-            }
-            .profile-img {
-                width: 140px;
-                height: 140px;
-            }
-            .profile-img-wrapper::before {
-                width: 160px;
-                height: 160px;
-            }
-            .hero-name {
-                font-size: 1.75rem;
-            }
-            .hero-role {
-                font-size: 1rem;
-            }
-            .hero-bio {
-                font-size: 0.95rem;
-            }
-            .section {
-                padding: 3rem 0;
-            }
-            .section-title {
-                font-size: 1.5rem;
-            }
-            .social-link {
-                padding: 0.5rem 1rem;
-                font-size: 0.85rem;
-            }
-            .contact-card {
-                padding: 1.5rem;
-            }
-            .navbar-brand {
-                font-size: 1.25rem;
-            }
-            .nav-link {
-                margin: 0.25rem 0;
-                padding: 0.5rem 0 !important;
-            }
-            .project-card {
-                padding: 1.25rem;
-            }
-        }
-        
-        @media (max-width: 575.98px) {
-            .hero-name {
-                font-size: 1.5rem;
-            }
-            .profile-img {
-                width: 120px;
-                height: 120px;
-            }
-            .profile-img-wrapper::before {
-                width: 140px;
-                height: 140px;
-            }
-            .social-links {
-                gap: 0.6rem;
-            }
-            .social-link {
-                padding: 0.45rem 0.85rem;
-                font-size: 0.8rem;
-            }
-            .section-title {
-                font-size: 1.35rem;
-            }
-            .stat-number {
-                font-size: 1.5rem;
-            }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+
+    <!-- Devicon (Colored Official Tech Badges) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
+
+    <!-- Custom Sleek Dark Glassmorphism Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#"><span>Portfolio</span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+    <!-- Luminous Scroll Progress Indicator -->
+    <div id="scroll-progress-bar" class="scroll-progress-bar"></div>
+
+    <!-- Interactive Ambient Cursor Spotlight Aura -->
+    <div id="cursor-ambient-glow" class="cursor-ambient-glow"></div>
+
+    <!-- Interactive Ambient Canvas & Background Mesh -->
+    <canvas id="bg-canvas"></canvas>
+    <div class="bg-grid-pattern"></div>
+    <div class="ambient-glow-1"></div>
+    <div class="ambient-glow-2"></div>
+    <div class="ambient-glow-3"></div>
+
+    <div class="site-wrapper">
+        <!-- Floating Glassmorphic Navbar -->
+        <header class="navbar">
+            <div class="container nav-container">
+                <a href="#about" class="nav-logo">
+                    <div class="nav-logo-badge">PS</div>
+                    <span>Pikki Solomon</span>
+                </a>
+
+                <ul class="nav-links">
+                    <li><a href="#about" class="nav-link active">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
-            </div>
-        </div>
-    </nav>
 
-    <!-- About / Hero Section -->
-    <section id="about" class="hero-section text-center">
-        <div class="container">
-            <div class="profile-img-wrapper fade-in">
-                <img src="image.jpeg" alt="Profile Photo" class="profile-img">
+                <div class="nav-actions">
+                    <a href="resume.pdf" target="_blank" class="btn btn-outline-cyan btn-sm btn-resume open-resume-btn" title="View or Download Resume PDF">
+                        <i class="fa-solid fa-file-pdf"></i> Resume
+                    </a>
+                    <button class="nav-mobile-toggle" aria-label="Toggle navigation menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
             </div>
-            <h1 class="hero-name fade-in delay-1">Pikki Solomon</h1>
-            <h5 class="hero-role fade-in delay-2">Aspiring Full-Stack Developer</h5>
-            <p class="hero-bio mx-auto fade-in delay-3">
-                Hi! I'm a passionate fresher with a strong foundation in web development and programming. I love building creative solutions and am eager to contribute to innovative projects.
-            </p>
-            <div class="social-links fade-in delay-4">
-                <a href="mailto:pikkisolomon05@gmail.com" class="social-link">
-                    <i class="bi bi-envelope"></i> pikkisolomon05@gmail.com
-                </a>
-                <a href="tel:+916309634155" class="social-link">
-                    <i class="bi bi-telephone"></i> +916309634155
-                </a>
-                <a href="https://www.linkedin.com/in/pikki-solomon-511558429" target="_blank" rel="noopener" class="social-link">
-                    <i class="bi bi-linkedin"></i> LinkedIn
-                </a>
-                <a href="https://github.com/ShadowMonarch8855" target="_blank" rel="noopener" class="social-link">
-                    <i class="bi bi-github"></i> GitHub
-                </a>
-            </div>
-        </div>
-    </section>
+        </header>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title">Skills</h2>
-                <p class="section-subtitle">Technologies and tools I work with</p>
-            </div>
-            <div class="text-center">
-                <span class="skill-tag">HTML5</span>
-                <span class="skill-tag">CSS3</span>
-                <span class="skill-tag">JavaScript</span>
-                <span class="skill-tag">Bootstrap</span>
-                <span class="skill-tag">React.js</span>
-                <span class="skill-tag">Node.js</span>
-                <span class="skill-tag">Express.js</span>
-                <span class="skill-tag">Java</span>
-                <span class="skill-tag">Git & GitHub</span>
-                <span class="skill-tag">MongoDB</span>
-                <span class="skill-tag">SQL</span>
-            </div>
-        </div>
-    </section>
+        <!-- Chapter 01: Split Interactive Hero -->
+        <section id="about" class="hero-section book-page">
+            <div class="container">
+                <div class="hero-split-grid">
+                    <!-- Left Hero Column -->
+                    <div class="hero-left">
+                        <div class="hero-meta-row reveal">
+                            <span class="chapter-tag">// PAGE 01 &bull; OVERVIEW</span>
+                            <div class="status-badge">
+                                <span class="status-dot"></span>
+                                <span>Available for Full-Time Roles</span>
+                            </div>
+                            <div class="location-tag">
+                                <i class="fa-solid fa-location-dot"></i> Chirala, Andhra Pradesh, India
+                            </div>
+                        </div>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title">Projects</h2>
-                <p class="section-subtitle">Some of my recent work</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-6">
-                    <div class="project-card fade-in">
-                        <div class="project-icon"><i class="bi bi-window"></i></div>
-                        <h5>E-commerce shopping Website</h5>
-                        <p>A responsive E-commerce shopping website With Payment Integration built with HTML5, CSS3, JavaScript and with Node.js showcase my skills and projects.</p>
-                        <a href="https://demoselling.netlify.app/" target="_blank" rel="noopener" class="project-link">
-              View Project <i class="bi bi-box-arrow-up-right"></i>
-            </a>
+                        <h1 class="hero-headline reveal delay-100">
+                            I Build Full-Stack <br>
+                            <span class="text-gradient text-gradient-shimmer">Web Applications</span>
+                        </h1>
+
+                        <div class="hero-role-pill reveal delay-100">
+                            <span class="role-intro">Pikki Solomon &mdash; </span>
+                            <span id="typewriter-role" class="typewriter-text" data-roles='["Full-Stack Developer (MERN)", "MCA Candidate (2024-26)", "REST API & Web Engineer", "Modern UI & Clean Code Builder"]'>Full-Stack Developer (MERN)</span><span class="typewriter-cursor">|</span>
+                        </div>
+
+                        <p class="hero-bio reveal delay-200">
+                            Goal-driven Full-Stack Developer with practical industry internship experience designing responsive web applications using the <strong>MERN Stack</strong> (React, Node.js, Express, MongoDB), with foundational knowledge in <strong>Java</strong> and <strong>Python</strong>, and hands-on experience utilizing a <strong>PostgreSQL</strong> database for the LMS project. Certified in MERN Full-Stack Development (FSD) and Artificial Intelligence with proven competence in modular architectures, Role-Based Access Control (RBAC), and 20+ RESTful API endpoints engineered at Novitech R&amp;D.
+                        </p>
+
+                        <!-- Action Buttons -->
+                        <div class="hero-cta-group reveal delay-300">
+                            <a href="resume.pdf" target="_blank" class="btn btn-primary open-resume-btn">
+                                <i class="fa-solid fa-file-pdf"></i> View Resume
+                            </a>
+                            <a href="resume.pdf" download="Pikki_Solomon_Resume.pdf" class="btn btn-secondary">
+                                <i class="fa-solid fa-download"></i> Download CV
+                            </a>
+                            <a href="#projects" class="btn btn-outline-cyan">
+                                <i class="fa-solid fa-laptop-code"></i> Explore Work
+                            </a>
+                        </div>
+
+                        <!-- Social Connection Chips -->
+                        <div class="hero-social-bar reveal delay-300">
+                            <a href="mailto:pikkisolomon05@gmail.com" class="social-chip" title="Email Pikki Solomon">
+                                <i class="fa-solid fa-envelope"></i>
+                                <span>pikkisolomon05@gmail.com</span>
+                            </a>
+                            <a href="tel:+916309634155" class="social-chip" title="Call Pikki Solomon">
+                                <i class="fa-solid fa-phone"></i>
+                                <span>+91-6309634155</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/pikkisolomon" target="_blank" rel="noopener noreferrer" class="social-chip" title="LinkedIn Profile">
+                                <i class="fa-brands fa-linkedin"></i>
+                                <span>linkedin.com/in/pikkisolomon</span>
+                            </a>
+                            <a href="https://github.com/ShadowMonarch8855" target="_blank" rel="noopener noreferrer" class="social-chip" title="GitHub Profile">
+                                <i class="fa-brands fa-github"></i>
+                                <span>github.com/ShadowMonarch8855</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Hero Column: Holographic Developer Glass Card -->
+                    <div class="hero-right reveal delay-200">
+                        <div class="hero-profile-card">
+                            <div class="profile-avatar-box">
+                                <img src="image.jpeg" alt="Pikki Solomon" class="profile-photo">
+                                <div class="verified-badge" title="Verified Full-Stack Developer">✓</div>
+                            </div>
+
+                            <h2 class="card-candidate-name">Pikki Solomon</h2>
+                            <div class="card-candidate-role">Full-Stack Developer (MERN)</div>
+
+                            <div class="hero-card-metrics">
+                                <div class="card-mini-stat">
+                                    <div class="mini-value">Novitech R&amp;D</div>
+                                    <div class="mini-label">MERN Trainee</div>
+                                </div>
+                                <div class="card-mini-stat">
+                                    <div class="mini-value"><span class="counter-number" data-target="20">20</span>+ APIs</div>
+                                    <div class="mini-label">REST &amp; RBAC</div>
+                                </div>
+                                <div class="card-mini-stat">
+                                    <div class="mini-value">MCA '26</div>
+                                    <div class="mini-label">Software Eng.</div>
+                                </div>
+                                <div class="card-mini-stat">
+                                    <div class="mini-value">Production</div>
+                                    <div class="mini-label">Render &amp; Netlify</div>
+                                </div>
+                            </div>
+
+                            <div class="hero-card-terminal">
+                                <div class="terminal-dots">
+                                    <span class="dot-red"></span>
+                                    <span class="dot-yellow"></span>
+                                    <span class="dot-green"></span>
+                                </div>
+                                <span>const dev = { focus: 'MERN Stack', basics: ['Java', 'Python'], status: 'Available' };</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="project-card fade-in delay-1">
-                        <div class="project-icon"><i class="bi bi-cloud-sun"></i></div>
-                        <h5>Personal Portfolio Website</h5>
-                        <p>Developed a Personal Portfolio Website using HTML5, CSS3, Bootstrap and JavaScript to ShowCase my skills.</p>
-                        <a href="https://pikkiportfolio.netlify.app" target="_blank" rel="noopener" class="project-link">
-              View Project <i class="bi bi-box-arrow-up-right"></i>
-            </a>
+
+                <!-- Stats Highlights Grid -->
+                <div class="stats-grid reveal delay-300">
+                    <div class="stat-item glass-card">
+                        <div class="stat-value">MERN Stack</div>
+                        <div class="stat-label">Full-Stack Core</div>
+                    </div>
+                    <div class="stat-item glass-card">
+                        <div class="stat-value"><span class="counter-number" data-target="20">20</span>+ Endpoints</div>
+                        <div class="stat-label">REST APIs &amp; RBAC</div>
+                    </div>
+                    <div class="stat-item glass-card">
+                        <div class="stat-value">Novitech R&amp;D</div>
+                        <div class="stat-label">Industry Trainee</div>
+                    </div>
+                    <div class="stat-item glass-card">
+                        <div class="stat-value">MCA (2024-26)</div>
+                        <div class="stat-label">Advanced SWE &amp; DSA</div>
                     </div>
                 </div>
-                <!-- <div class="col-md-6">
-                    <div class="project-card fade-in delay-2">
-                        <div class="project-icon"><i class="bi bi-check2-square"></i></div>
-                        <h5>Task Manager</h5>
-                        <p>A simple task manager built with React for adding, editing, and deleting daily tasks.</p>
-                        <a href="#" target="_blank" rel="noopener" class="project-link">
-              View Project <i class="bi bi-box-arrow-up-right"></i>
-            </a>
+
+                <!-- Tech Trust Logo Strip -->
+                <div class="tech-trust-strip reveal delay-400">
+                    <div class="tech-trust-item">
+                        <i class="devicon-react-original colored"></i>
+                        <span>React</span>
+                    </div>
+                    <div class="tech-trust-item">
+                        <i class="devicon-nodejs-plain colored"></i>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="tech-trust-item">
+                        <i class="devicon-express-original"></i>
+                        <span>Express</span>
+                    </div>
+                    <div class="tech-trust-item">
+                        <i class="devicon-mongodb-plain colored"></i>
+                        <span>MongoDB</span>
+                    </div>
+                    <div class="tech-trust-item">
+                        <i class="devicon-postgresql-plain colored"></i>
+                        <span>PostgreSQL</span>
+                    </div>
+                    <div class="tech-trust-item">
+                        <i class="devicon-javascript-plain colored"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="tech-trust-item">
+                        <i class="devicon-tailwindcss-plain colored"></i>
+                        <span>Tailwind</span>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="project-card fade-in delay-3">
-                        <div class="project-icon"><i class="bi bi-database"></i></div>
-                        <h5>Student Database System</h5>
-                        <p>Created a Python-based student database system with CRUD operations and SQLite integration.</p>
-                        <a href="#" target="_blank" rel="noopener" class="project-link">
-              View Project <i class="bi bi-box-arrow-up-right"></i>
-            </a>
+            </div>
+        </section>
+
+        <!-- Chapter 02: Technical Skills -->
+        <section id="skills" class="book-page">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="chapter-tag">// PAGE 02 &bull; TECHNICAL ARSENAL</span>
+                    <h2 class="section-title">
+                        Tools of the <span class="gradient-text">Modern Craft</span>
+                    </h2>
+                    <p class="section-desc">
+                        Comprehensive skill matrix spanning frontend component architecture, backend API engineering, relational &amp; NoSQL databases, cloud deployments, and developer tooling.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Marquee Row 1 (Left Scrolling: Frontend & Core Languages) -->
+            <div class="marquee-wrapper">
+                <div class="marquee-track marquee-track-left">
+                    <div class="skill-badge"><i class="devicon-react-original colored"></i> React.js</div>
+                    <div class="skill-badge"><i class="devicon-vite-original colored"></i> Vite</div>
+                    <div class="skill-badge"><i class="devicon-tailwindcss-plain colored"></i> Tailwind CSS</div>
+                    <div class="skill-badge"><i class="devicon-javascript-plain colored"></i> JavaScript (ES6+)</div>
+                    <div class="skill-badge"><i class="devicon-java-plain colored"></i> Java (Basics)</div>
+                    <div class="skill-badge"><i class="devicon-python-plain colored"></i> Python (Basics)</div>
+                    <div class="skill-badge"><i class="devicon-bootstrap-plain colored"></i> Bootstrap</div>
+                    <div class="skill-badge"><i class="devicon-html5-plain colored"></i> HTML5</div>
+                    <div class="skill-badge"><i class="devicon-css3-plain colored"></i> CSS3</div>
+
+                    <!-- Duplicate for Infinite Loop -->
+                    <div class="skill-badge"><i class="devicon-react-original colored"></i> React.js</div>
+                    <div class="skill-badge"><i class="devicon-vite-original colored"></i> Vite</div>
+                    <div class="skill-badge"><i class="devicon-tailwindcss-plain colored"></i> Tailwind CSS</div>
+                    <div class="skill-badge"><i class="devicon-javascript-plain colored"></i> JavaScript (ES6+)</div>
+                    <div class="skill-badge"><i class="devicon-java-plain colored"></i> Java (Basics)</div>
+                    <div class="skill-badge"><i class="devicon-python-plain colored"></i> Python (Basics)</div>
+                    <div class="skill-badge"><i class="devicon-bootstrap-plain colored"></i> Bootstrap</div>
+                    <div class="skill-badge"><i class="devicon-html5-plain colored"></i> HTML5</div>
+                    <div class="skill-badge"><i class="devicon-css3-plain colored"></i> CSS3</div>
+                </div>
+            </div>
+
+            <!-- Marquee Row 2 (Right Scrolling: Backend, Databases, Cloud & APIs) -->
+            <div class="marquee-wrapper">
+                <div class="marquee-track marquee-track-right">
+                    <div class="skill-badge"><i class="devicon-nodejs-plain colored"></i> Node.js</div>
+                    <div class="skill-badge"><i class="devicon-express-original"></i> Express.js</div>
+                    <div class="skill-badge"><i class="devicon-postgresql-plain colored"></i> PostgreSQL</div>
+                    <div class="skill-badge"><i class="devicon-mongodb-plain colored"></i> MongoDB &amp; Atlas</div>
+                    <div class="skill-badge"><i class="devicon-mysql-plain colored"></i> MySQL</div>
+                    <div class="skill-badge"><i class="fa-solid fa-server" style="color:#22d3ee"></i> RESTful APIs</div>
+                    <div class="skill-badge"><i class="fa-solid fa-shield-halved" style="color:#a855f7"></i> JWT &amp; RBAC</div>
+                    <div class="skill-badge"><i class="fa-solid fa-credit-card" style="color:#10b981"></i> Razorpay API</div>
+                    <div class="skill-badge"><i class="devicon-git-plain colored"></i> Git &amp; GitHub</div>
+                    <div class="skill-badge"><i class="devicon-postman-plain colored"></i> Postman</div>
+
+                    <!-- Duplicate for Infinite Loop -->
+                    <div class="skill-badge"><i class="devicon-nodejs-plain colored"></i> Node.js</div>
+                    <div class="skill-badge"><i class="devicon-express-original"></i> Express.js</div>
+                    <div class="skill-badge"><i class="devicon-postgresql-plain colored"></i> PostgreSQL</div>
+                    <div class="skill-badge"><i class="devicon-mongodb-plain colored"></i> MongoDB &amp; Atlas</div>
+                    <div class="skill-badge"><i class="devicon-mysql-plain colored"></i> MySQL</div>
+                    <div class="skill-badge"><i class="fa-solid fa-server" style="color:#22d3ee"></i> RESTful APIs</div>
+                    <div class="skill-badge"><i class="fa-solid fa-shield-halved" style="color:#a855f7"></i> JWT &amp; RBAC</div>
+                    <div class="skill-badge"><i class="fa-solid fa-credit-card" style="color:#10b981"></i> Razorpay API</div>
+                    <div class="skill-badge"><i class="devicon-git-plain colored"></i> Git &amp; GitHub</div>
+                    <div class="skill-badge"><i class="devicon-postman-plain colored"></i> Postman</div>
+                </div>
+            </div>
+
+            <!-- Categorized Technical Skill Cards (Directly from Resume) -->
+            <div class="container">
+                <div class="skills-category-grid reveal">
+                    <!-- Languages -->
+                    <div class="skill-cat-card glass-card">
+                        <div class="skill-cat-title">
+                            <i class="fa-solid fa-code"></i> Languages
+                        </div>
+                        <div class="skill-cat-tags">
+                            <span class="skill-pill">JavaScript (ES6+)</span>
+                            <span class="skill-pill">Java (Basics)</span>
+                            <span class="skill-pill">Python (Basics)</span>
+                            <span class="skill-pill">SQL (Basics)</span>
+                            <span class="skill-pill">HTML5</span>
+                            <span class="skill-pill">CSS3</span>
+                        </div>
                     </div>
-                </div> -->
+
+                    <!-- Frontend -->
+                    <div class="skill-cat-card glass-card">
+                        <div class="skill-cat-title">
+                            <i class="fa-solid fa-palette"></i> Frontend
+                        </div>
+                        <div class="skill-cat-tags">
+                            <span class="skill-pill">React.js</span>
+                            <span class="skill-pill">Vite</span>
+                            <span class="skill-pill">Tailwind CSS</span>
+                            <span class="skill-pill">Bootstrap</span>
+                            <span class="skill-pill">Component Architecture</span>
+                            <span class="skill-pill">Responsive Design</span>
+                        </div>
+                    </div>
+
+                    <!-- Backend & APIs -->
+                    <div class="skill-cat-card glass-card">
+                        <div class="skill-cat-title">
+                            <i class="fa-solid fa-gears"></i> Backend &amp; APIs
+                        </div>
+                        <div class="skill-cat-tags">
+                            <span class="skill-pill">Node.js</span>
+                            <span class="skill-pill">Express.js</span>
+                            <span class="skill-pill">RESTful APIs</span>
+                            <span class="skill-pill">JWT Authentication</span>
+                            <span class="skill-pill">RBAC</span>
+                            <span class="skill-pill">Multer</span>
+                            <span class="skill-pill">Bcrypt</span>
+                        </div>
+                    </div>
+
+                    <!-- Databases & Cloud -->
+                    <div class="skill-cat-card glass-card">
+                        <div class="skill-cat-title">
+                            <i class="fa-solid fa-database"></i> Databases &amp; Cloud
+                        </div>
+                        <div class="skill-cat-tags">
+                            <span class="skill-pill highlight">MongoDB / Atlas</span>
+                            <span class="skill-pill">PostgreSQL</span>
+                            <span class="skill-pill">MySQL</span>
+                            <span class="skill-pill">Mongoose</span>
+                            <span class="skill-pill">Render</span>
+                            <span class="skill-pill">Netlify</span>
+                        </div>
+                    </div>
+
+                    <!-- Developer Tools -->
+                    <div class="skill-cat-card glass-card">
+                        <div class="skill-cat-title">
+                            <i class="fa-solid fa-screwdriver-wrench"></i> Developer Tools
+                        </div>
+                        <div class="skill-cat-tags">
+                            <span class="skill-pill">Git</span>
+                            <span class="skill-pill">GitHub</span>
+                            <span class="skill-pill">Postman</span>
+                            <span class="skill-pill">VS Code</span>
+                            <span class="skill-pill">Razorpay Payment API</span>
+                            <span class="skill-pill">npm</span>
+                        </div>
+                    </div>
+
+                    <!-- Core Architectural Patterns -->
+                    <div class="skill-cat-card glass-card">
+                        <div class="skill-cat-title">
+                            <i class="fa-solid fa-layer-group"></i> Architecture &amp; Practices
+                        </div>
+                        <div class="skill-cat-tags">
+                            <span class="skill-pill">Three-Tier Architecture</span>
+                            <span class="skill-pill">Agile Collaboration</span>
+                            <span class="skill-pill">Relational Data Workflows</span>
+                            <span class="skill-pill">Automated Cloud Deployments</span>
+                            <span class="skill-pill">CORS &amp; Reverse Proxy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chapter 03: Professional Experience (Internship) -->
+        <section id="experience" class="book-page">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="chapter-tag">// PAGE 03 &bull; INDUSTRIAL EXPERIENCE</span>
+                    <h2 class="section-title">
+                        Professional <span class="gradient-text">Experience</span>
+                    </h2>
+                    <p class="section-desc">
+                        Hands-on software engineering internship experience delivering enterprise-grade full-stack solutions and modular web applications.
+                    </p>
+                </div>
+
+                <div class="timeline-container">
+                    <!-- Novitech R&D Experience Item -->
+                    <div class="timeline-item left reveal">
+                        <div class="timeline-node"></div>
+                        <div class="timeline-card glass-card">
+                            <div class="timeline-header">
+                                <h3 class="timeline-role">MERN Full-Stack Development Trainee</h3>
+                                <span class="timeline-period"><i class="fa-regular fa-calendar"></i> July 2026 – August 2026</span>
+                            </div>
+                            <div class="timeline-company">
+                                <i class="fa-solid fa-building-shield"></i> Novitech R&amp;D Pvt. Ltd.
+                            </div>
+
+                            <div class="timeline-deliverable">
+                                <strong>Key Deliverable:</strong> ClientFlow — Enterprise Client Visit &amp; Onboarding Management Platform
+                            </div>
+
+                            <ul class="timeline-bullets">
+                                <li><strong>Architecture &amp; Development:</strong> Architected and deployed an end-to-end, three-tier web application to automate executive client visits, stakeholder agendas, milestone tracking, and document delivery.</li>
+                                <li><strong>Dynamic Onboarding Blueprints:</strong> Engineered 3 industry-standard onboarding templates (Client Onsite Visits, SaaS Enterprise Implementation, and Agency Marketing) with multi-stage approval workflows and task checklists.</li>
+                                <li><strong>Security &amp; Authentication:</strong> Implemented strict Role-Based Access Control (RBAC) across Admin, Team Member, and Client personas using JSON Web Tokens (JWT) and Bcrypt encryption to safeguard confidential project workflows.</li>
+                                <li><strong>RESTful API &amp; Data Modeling:</strong> Built 20+ modular REST API endpoints in Express.js and structured MongoDB schemas for real-time visit tracking, automated invoicing, and status notifications.</li>
+                                <li><strong>Cloud Deployment:</strong> Configured live production deployment on Render and MongoDB Atlas with automated database seeding routines, CORS security headers, and reverse proxy handling.</li>
+                            </ul>
+
+                            <div class="timeline-tags">
+                                <span class="tech-tag">React.js</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Express.js</span>
+                                <span class="tech-tag">MongoDB Atlas</span>
+                                <span class="tech-tag">Tailwind CSS</span>
+                                <span class="tech-tag">Render</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chapter 04: Featured Projects (3 Key Production Systems) -->
+        <section id="projects" class="book-page">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="chapter-tag">// PAGE 04 &bull; PRODUCTION SOFTWARE SYSTEMS</span>
+                    <h2 class="section-title">
+                        Featured <span class="gradient-text">Engineering Projects</span>
+                    </h2>
+                    <p class="section-desc">
+                        Production-focused web applications built with the MERN Stack, secure REST APIs, role-based access control, and relational database integration using PostgreSQL.
+                    </p>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1: ClientFlow -->
+                    <div class="project-card-wrapper reveal">
+                        <div class="project-card">
+                            <div class="card-window-header">
+                                <div class="window-dots">
+                                    <span class="dot-red"></span>
+                                    <span class="dot-yellow"></span>
+                                    <span class="dot-green"></span>
+                                </div>
+                                <div class="window-title-bar"><span class="project-status-dot"></span>clientflow.onrender.com</div>
+                                <span class="project-badge">Enterprise Platform</span>
+                            </div>
+
+                            <div class="project-top">
+                                <div class="project-icon-box">
+                                    <i class="fa-solid fa-diagram-project"></i>
+                                </div>
+                            </div>
+
+                            <h3 class="project-title">ClientFlow — Enterprise Client Visit &amp; Onboarding Platform</h3>
+                            <p class="project-desc">
+                                End-to-end, three-tier enterprise web application engineered at Novitech R&amp;D to automate executive client visits, stakeholder agendas, milestone tracking, and secure document delivery.
+                            </p>
+
+                            <ul class="project-highlights">
+                                <li><i class="fa-solid fa-check"></i> 3 dynamic onboarding blueprints with multi-stage approval workflows.</li>
+                                <li><i class="fa-solid fa-check"></i> Strict RBAC across Admin, Team Member, &amp; Client personas with JWT &amp; Bcrypt.</li>
+                                <li><i class="fa-solid fa-check"></i> 20+ modular Express REST APIs &amp; automated database seeding on Render.</li>
+                            </ul>
+
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">React.js</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Express.js</span>
+                                <span class="tech-tag">MongoDB Atlas</span>
+                                <span class="tech-tag">Tailwind CSS</span>
+                                <span class="tech-tag">Render</span>
+                            </div>
+
+                            <div class="project-actions">
+                                <a href="https://clientflow-app-bgnn.onrender.com" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Live App
+                                </a>
+                                <a href="https://github.com/ShadowMonarch8855/Onboarding-Client-visit" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-secondary">
+                                    <i class="fa-brands fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: VastraKart -->
+                    <div class="project-card-wrapper reveal delay-100">
+                        <div class="project-card">
+                            <div class="card-window-header">
+                                <div class="window-dots">
+                                    <span class="dot-red"></span>
+                                    <span class="dot-yellow"></span>
+                                    <span class="dot-green"></span>
+                                </div>
+                                <div class="window-title-bar"><span class="project-status-dot"></span>demoselling.netlify.app</div>
+                                <span class="project-badge">E-Commerce Store</span>
+                            </div>
+
+                            <div class="project-top">
+                                <div class="project-icon-box">
+                                    <i class="fa-solid fa-bag-shopping"></i>
+                                </div>
+                            </div>
+
+                            <h3 class="project-title">VastraKart — Fashion E-Commerce Platform</h3>
+                            <p class="project-desc">
+                                Fully responsive fashion e-commerce storefront featuring dynamic apparel catalogs, category filtering, search, user session management, and Razorpay payment integration.
+                            </p>
+
+                            <ul class="project-highlights">
+                                <li><i class="fa-solid fa-check"></i> Integrated Razorpay Payment Gateway API for real-time payments &amp; callbacks.</li>
+                                <li><i class="fa-solid fa-check"></i> Structured modular server-side route handlers to securely handle checkout workflows.</li>
+                                <li><i class="fa-solid fa-check"></i> High-performance frontend deployed on Netlify with sub-second page loads.</li>
+                            </ul>
+
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">HTML5/CSS3</span>
+                                <span class="tech-tag">JavaScript ES6+</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Express.js</span>
+                                <span class="tech-tag">Razorpay API</span>
+                                <span class="tech-tag">Netlify</span>
+                            </div>
+
+                            <div class="project-actions">
+                                <a href="https://demoselling.netlify.app" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Store
+                                </a>
+                                <a href="https://github.com/ShadowMonarch8855" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-secondary">
+                                    <i class="fa-brands fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: LMS (Built with PostgreSQL) -->
+                    <div class="project-card-wrapper reveal delay-200">
+                        <div class="project-card">
+                            <div class="card-window-header">
+                                <div class="window-dots">
+                                    <span class="dot-red"></span>
+                                    <span class="dot-yellow"></span>
+                                    <span class="dot-green"></span>
+                                </div>
+                                <div class="window-title-bar"><span class="project-status-dot offline"></span>github.com/ShadowMonarch8855/LMS</div>
+                                <span class="project-badge">PostgreSQL DB &amp; RBAC</span>
+                            </div>
+
+                            <div class="project-top">
+                                <div class="project-icon-box">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                </div>
+                            </div>
+
+                            <h3 class="project-title">LMS — Role-Based Learning Management System</h3>
+                            <p class="project-desc">
+                                Full-stack Learning Management System designed to facilitate accessible technology education with Role-Based Access Control (RBAC) across student and instructor workflows, powered by an Express.js backend and a PostgreSQL database for managing course and enrollment data.
+                            </p>
+
+                            <ul class="project-highlights">
+                                <li><i class="fa-solid fa-check"></i> Utilized <strong>PostgreSQL</strong> database to store user accounts, course enrollments, and learning progress.</li>
+                                <li><i class="fa-solid fa-check"></i> Role-Based Access Control (RBAC) separating Student and Instructor dashboard personas.</li>
+                                <li><i class="fa-solid fa-check"></i> Modular REST API backend with Express.js executing structured SQL queries.</li>
+                            </ul>
+
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">React.js</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Express.js</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">SQL</span>
+                                <span class="tech-tag">RBAC</span>
+                            </div>
+
+                            <div class="project-actions">
+                                <a href="https://github.com/ShadowMonarch8855/LMS" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary">
+                                    <i class="fa-brands fa-github"></i> GitHub Repo
+                                </a>
+                                <a href="https://github.com/ShadowMonarch8855" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-secondary">
+                                    <i class="fa-solid fa-code"></i> Architecture
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chapter 05: Education & Certifications -->
+        <section id="education" class="book-page">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="chapter-tag">// PAGE 05 &bull; ACADEMIC FOUNDATION</span>
+                    <h2 class="section-title">
+                        Education &amp; <span class="gradient-text">Certifications</span>
+                    </h2>
+                    <p class="section-desc">
+                        Rigorous academic foundation in Computer Applications &amp; Computer Science, paired with accredited industry certifications.
+                    </p>
+                </div>
+
+                <!-- Education Timeline -->
+                <div class="timeline-container">
+                    <!-- MCA Degree -->
+                    <div class="timeline-item left reveal">
+                        <div class="timeline-node"></div>
+                        <div class="timeline-card glass-card">
+                            <div class="timeline-header">
+                                <h3 class="timeline-role">Master of Computer Applications (MCA)</h3>
+                                <span class="timeline-period"><i class="fa-regular fa-calendar"></i> 2024 – 2026</span>
+                            </div>
+                            <div class="timeline-company">
+                                <i class="fa-solid fa-school"></i> VRS &amp; YRN College of Engineering and Technologies, Chirala
+                            </div>
+                            <ul class="timeline-bullets">
+                                <li><strong>Core Track:</strong> Advanced Software Engineering, Database Management Systems (DBMS), Data Structures &amp; Algorithms (DSA).</li>
+                                <li>Focused on architecting scalable enterprise systems, database optimization, and high-performance algorithms.</li>
+                            </ul>
+                            <div class="timeline-tags">
+                                <span class="tech-tag">Advanced SWE</span>
+                                <span class="tech-tag">DBMS</span>
+                                <span class="tech-tag">DSA</span>
+                                <span class="tech-tag">Software Architecture</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- B.Sc. Degree -->
+                    <div class="timeline-item right reveal delay-200">
+                        <div class="timeline-node"></div>
+                        <div class="timeline-card glass-card">
+                            <div class="timeline-header">
+                                <h3 class="timeline-role">Bachelor of Science (B.Sc.) in Computer Science</h3>
+                                <span class="timeline-period"><i class="fa-regular fa-calendar"></i> 2021 – 2024</span>
+                            </div>
+                            <div class="timeline-company">
+                                <i class="fa-solid fa-graduation-cap"></i> Chaithanya Bharathi Degree College, Chirala
+                            </div>
+                            <ul class="timeline-bullets">
+                                <li><strong>Core Track:</strong> Computer Science Principles, Object-Oriented Programming (Java), Operating Systems, Computer Networks.</li>
+                                <li>Built solid computer science foundations, algorithm analysis, and modular object-oriented software engineering skills.</li>
+                            </ul>
+                            <div class="timeline-tags">
+                                <span class="tech-tag">CS Principles</span>
+                                <span class="tech-tag">OOP (Java)</span>
+                                <span class="tech-tag">Operating Systems</span>
+                                <span class="tech-tag">Networks</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certifications & Achievements Grid -->
+                <div class="cert-grid reveal" style="margin-top: 3.5rem;">
+                    <!-- Cert 1: MERN FSD -->
+                    <div class="cert-card glass-card">
+                        <div class="cert-top">
+                            <div class="cert-icon">
+                                <i class="fa-solid fa-certificate"></i>
+                            </div>
+                            <div>
+                                <h4 class="cert-title">MERN Full-Stack Development (FSD) Certification</h4>
+                                <div class="cert-issuer">Novitech R&amp;D Pvt. Ltd.</div>
+                            </div>
+                        </div>
+                        <p class="cert-desc">
+                            In-depth industry training covering React.js, Node.js, Express.js, MongoDB, RESTful APIs, and full-stack integration for production web environments.
+                        </p>
+                    </div>
+
+                    <!-- Cert 2: AI & Data Analytics -->
+                    <div class="cert-card glass-card">
+                        <div class="cert-top">
+                            <div class="cert-icon">
+                                <i class="fa-solid fa-brain"></i>
+                            </div>
+                            <div>
+                                <h4 class="cert-title">Artificial Intelligence &amp; Data Analytics Certification</h4>
+                                <div class="cert-issuer">Novitech R&amp;D Pvt. Ltd.</div>
+                            </div>
+                        </div>
+                        <p class="cert-desc">
+                            Professional coursework in data modeling, exploratory analytics, and predictive workflows for modern data-driven systems.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chapter 06: Contact Section & Direct Communication -->
+        <section id="contact" class="book-page">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="chapter-tag">// PAGE 06 &bull; GET IN TOUCH</span>
+                    <h2 class="section-title">
+                        Let's Build <span class="gradient-text">Together</span>
+                    </h2>
+                    <p class="section-desc">
+                        Looking for a dedicated Full-Stack Developer and MCA candidate for your engineering team? Let's discuss how I can contribute.
+                    </p>
+                </div>
+
+                <div class="contact-layout">
+                    <!-- Left: Direct Channels with 1-Click Clipboard Copy -->
+                    <div class="contact-info-card glass-card reveal">
+                        <h3 class="contact-info-title">Direct Information</h3>
+                        <p class="contact-info-desc">
+                            Feel free to reach out directly via email, phone, or LinkedIn. Click email or phone to copy instantly to your clipboard!
+                        </p>
+
+                        <div class="contact-channels">
+                            <!-- Location -->
+                            <div class="contact-channel-item" style="cursor: default;">
+                                <div class="channel-icon-box">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div class="channel-content">
+                                    <div class="channel-label">Location</div>
+                                    <div class="channel-value">Chirala, Andhra Pradesh, India</div>
+                                </div>
+                            </div>
+
+                            <!-- Email Item -->
+                            <a href="mailto:pikkisolomon05@gmail.com" class="contact-channel-item copyable-channel" data-copy="pikkisolomon05@gmail.com" title="Click to copy email address">
+                                <div class="channel-icon-box">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div class="channel-content">
+                                    <div class="channel-label">Direct Email</div>
+                                    <div class="channel-value">pikkisolomon05@gmail.com</div>
+                                </div>
+                                <div class="channel-copy-hint">
+                                    <i class="fa-regular fa-copy"></i> Copy
+                                </div>
+                            </a>
+
+                            <!-- Phone Item -->
+                            <a href="tel:+916309634155" class="contact-channel-item copyable-channel" data-copy="+916309634155" title="Click to copy phone number">
+                                <div class="channel-icon-box">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div class="channel-content">
+                                    <div class="channel-label">Mobile Contact</div>
+                                    <div class="channel-value">+91-6309634155</div>
+                                </div>
+                                <div class="channel-copy-hint">
+                                    <i class="fa-regular fa-copy"></i> Copy
+                                </div>
+                            </a>
+
+                            <!-- Resume Quick Action Item -->
+                            <a href="resume.pdf" target="_blank" class="contact-channel-item open-resume-btn" title="View Official Resume PDF">
+                                <div class="channel-icon-box">
+                                    <i class="fa-solid fa-file-pdf"></i>
+                                </div>
+                                <div class="channel-content">
+                                    <div class="channel-label">Official Resume (PDF)</div>
+                                    <div class="channel-value">Pikki_Solomon_Resume.pdf</div>
+                                </div>
+                                <div class="channel-copy-hint">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Open
+                                </div>
+                            </a>
+
+                            <!-- LinkedIn Item -->
+                            <a href="https://www.linkedin.com/in/pikkisolomon" target="_blank" rel="noopener noreferrer" class="contact-channel-item" title="Open LinkedIn Profile">
+                                <div class="channel-icon-box">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </div>
+                                <div class="channel-content">
+                                    <div class="channel-label">LinkedIn Profile</div>
+                                    <div class="channel-value">linkedin.com/in/pikkisolomon</div>
+                                </div>
+                                <div class="channel-copy-hint">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </div>
+                            </a>
+
+                            <!-- GitHub Item -->
+                            <a href="https://github.com/ShadowMonarch8855" target="_blank" rel="noopener noreferrer" class="contact-channel-item" title="Open GitHub Profile">
+                                <div class="channel-icon-box">
+                                    <i class="fa-brands fa-github"></i>
+                                </div>
+                                <div class="channel-content">
+                                    <div class="channel-label">GitHub Repositories</div>
+                                    <div class="channel-value">github.com/ShadowMonarch8855</div>
+                                </div>
+                                <div class="channel-copy-hint">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right: Modern Glass Form with Floating Labels -->
+                    <div class="contact-form-card glass-card reveal delay-200">
+                        <div class="form-header">
+                            <h3>Send a Direct Message</h3>
+                            <p>Delivered directly to pikkisolomon05@gmail.com via Formspree.</p>
+                        </div>
+
+                        <form id="contactForm" action="https://formspree.io/f/xppaljqz" method="POST" novalidate>
+                            <input type="hidden" name="_subject" value="New Portfolio Message for Pikki Solomon">
+                            <input type="text" name="_gotcha" style="display:none">
+
+                            <div class="form-grid">
+                                <div class="floating-group">
+                                    <input type="text" class="floating-input" id="name" name="name" placeholder=" " required autocomplete="name">
+                                    <label for="name" class="floating-label">Your Full Name</label>
+                                </div>
+
+                                <div class="floating-group">
+                                    <input type="email" class="floating-input" id="email" name="email" placeholder=" " required autocomplete="email">
+                                    <label for="email" class="floating-label">Email Address</label>
+                                </div>
+                            </div>
+
+                            <div class="floating-group">
+                                <input type="text" class="floating-input" id="subject" name="subject" placeholder=" " required>
+                                <label for="subject" class="floating-label">Subject / Opportunity Role</label>
+                            </div>
+
+                            <div class="floating-group">
+                                <textarea class="floating-input" id="message" name="message" placeholder=" " required></textarea>
+                                <label for="message" class="floating-label">Tell me about your team or opportunity...</label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-send">
+                                <i class="fa-regular fa-paper-plane"></i> Send Message
+                            </button>
+
+                            <!-- Live Feedback Toast Message -->
+                            <div class="feedback-toast" id="formFeedback"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Glass Footer -->
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer-top">
+                    <div>
+                        <a href="#about" class="nav-logo">
+                            <div class="nav-logo-badge">PS</div>
+                            <span>Pikki Solomon</span>
+                        </a>
+                        <p class="footer-tagline" style="margin-top: 0.5rem;">
+                            Full-Stack Developer &amp; MCA Candidate &bull; Chirala, Andhra Pradesh, India
+                        </p>
+                    </div>
+
+                    <a href="#about" class="back-to-top-btn" id="backToTop" title="Scroll to top">
+                        <i class="fa-solid fa-arrow-up"></i>
+                    </a>
+                </div>
+
+                <div class="footer-bottom">
+                    <div>
+                        &copy; <span id="year"></span> Pikki Solomon. Engineered with modern web standards, MERN Stack &amp; RESTful architectures.
+                    </div>
+                    <div class="footer-credits">
+                        Crafted with <span>♥</span> &amp; modern engineering.
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Interactive Resume Viewer Modal -->
+    <div id="resumeModal" class="resume-modal" role="dialog" aria-modal="true" aria-labelledby="resumeModalTitle">
+        <div class="resume-modal-container">
+            <div class="resume-modal-header">
+                <div class="resume-modal-title" id="resumeModalTitle">
+                    <i class="fa-solid fa-file-pdf" style="color: #06b6d4;"></i>
+                    <span>Pikki Solomon — Resume</span>
+                </div>
+                <div class="resume-modal-actions">
+                    <a href="resume.pdf" download="Pikki_Solomon_Resume.pdf" class="btn btn-sm btn-outline-cyan" title="Download PDF to device">
+                        <i class="fa-solid fa-download"></i> Download
+                    </a>
+                    <a href="resume.pdf" target="_blank" class="btn btn-sm btn-secondary" title="Open in New Window">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Fullscreen
+                    </a>
+                    <button class="resume-close-btn" id="closeResumeModal" aria-label="Close modal">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="resume-modal-body">
+                <iframe id="resumeIframe" title="Resume Document Viewer"></iframe>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- =============================================
-    CONTACT FORM SETUP (Formspree)
-    -----------------------------------------------
-    1. Go to https://formspree.io and create a free account
-    2. Create a new form and copy your form ID
-    3. Replace "xqpykqag" in the form action URL below with your form ID
-       Example: action="https://formspree.io/f/abc123xyz"
-    4. Verify your email in Formspree dashboard
-    5. Messages will now be sent directly to pikkisolomon05@gmail.com
-    ============================================= -->
-    <section id="contact" class="section">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title">Contact Me</h2>
-                <p class="section-subtitle">Let's connect and build something together</p>
-            </div>
-            <div class="contact-card">
-                <form id="contactForm" action="https://formspree.io/f/xppaljqz" method="POST" novalidate>
-                    <input type="hidden" name="_subject" value="New portfolio message from Pikki Solomon">
-                    <input type="text" name="_gotcha" style="display:none">
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Full Name</label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your full name" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email Address</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea class="form-control" id="message" name="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
-                    </div>
-                    <div class="text-center">
-                        <button type="submit" class="btn btn-submit">
-              <i class="bi bi-send me-2"></i> Send Message
-            </button>
-                    </div>
-                    <div class="form-feedback" id="formFeedback"></div>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="text-center">
-        <div class="container">
-            <p class="mb-1">&copy; <span id="year"></span> pikki. All rights reserved.</p>
-            <p class="mb-0" style="font-size: 0.85rem;">
-                Built with <i class="bi bi-heart-fill" style="color: #e25555;"></i> and lots of <i class="bi bi-cup-hot-fill" style="color: #d4a373;"></i>
-            </p>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Dynamic year
-        document.getElementById('year').textContent = new Date().getFullYear();
-
-        // Navbar scroll effect
-        const navbar = document.querySelector('.navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        // Active nav link on scroll
-        const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('.nav-link');
-
-        function updateActiveLink() {
-            const scrollY = window.scrollY + 100;
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.offsetHeight;
-                const sectionId = section.getAttribute('id');
-                if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-                    navLinks.forEach(link => {
-                        link.classList.remove('active');
-                        if (link.getAttribute('href') === '#' + sectionId) {
-                            link.classList.add('active');
-                        }
-                    });
-                }
-            });
-        }
-
-        window.addEventListener('scroll', updateActiveLink);
-
-        // Fade-in animations on scroll
-        const fadeElements = document.querySelectorAll('.fade-in');
-
-        function revealFade() {
-            const windowHeight = window.innerHeight;
-            fadeElements.forEach(el => {
-                const rect = el.getBoundingClientRect();
-                if (rect.top < windowHeight - 80) {
-                    el.classList.add('visible');
-                }
-            });
-        }
-
-        window.addEventListener('scroll', revealFade);
-        window.addEventListener('load', () => {
-            revealFade();
-            updateActiveLink();
-        });
-
-        // Form submission handling via Formspree
-        const contactForm = document.getElementById('contactForm');
-        const formFeedback = document.getElementById('formFeedback');
-
-        contactForm.addEventListener('submit', async function(e) {
-            e.preventDefault();
-
-            const name = document.getElementById('name').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const message = document.getElementById('message').value.trim();
-
-            if (!name || !email || !message) {
-                showFeedback('Please fill in all fields.', 'error');
-                return;
-            }
-
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                showFeedback('Please enter a valid email address.', 'error');
-                return;
-            }
-
-            const formData = new FormData(contactForm);
-            const submitBtn = contactForm.querySelector('.btn-submit');
-            const originalText = submitBtn.innerHTML;
-            submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span> Sending...';
-            submitBtn.disabled = true;
-
-            try {
-                const response = await fetch(contactForm.action, {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                });
-
-                if (response.ok) {
-                    showFeedback('Thank you for reaching out! Your message has been sent successfully.', 'success');
-                    contactForm.reset();
-                } else {
-                    const data = await response.json().catch(() => ({}));
-                    showFeedback(data.error || 'Something went wrong. Please try again or email me directly.', 'error');
-                }
-            } catch (error) {
-                showFeedback('Network error. Please check your connection and try again.', 'error');
-            } finally {
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
-            }
-        });
-
-        function showFeedback(message, type) {
-            formFeedback.textContent = message;
-            formFeedback.style.display = 'block';
-            if (type === 'success') {
-                formFeedback.style.background = 'rgba(25, 135, 84, 0.1)';
-                formFeedback.style.border = '1px solid rgba(25, 135, 84, 0.4)';
-                formFeedback.style.color = '#75b798';
-            } else {
-                formFeedback.style.background = 'rgba(220, 53, 69, 0.1)';
-                formFeedback.style.border = '1px solid rgba(220, 53, 69, 0.4)';
-                formFeedback.style.color = '#f8a5a5';
-            }
-            formFeedback.className = 'form-feedback';
-
-            if (type === 'success') {
-                setTimeout(() => {
-                    formFeedback.style.display = 'none';
-                }, 6000);
-            }
-        }
-    </script>
+    <!-- Client Script Engine -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>
