@@ -6,7 +6,7 @@
  * Author: Pikki Solomon | Principal Frontend Architecture
  * ============================================================================
  */
-
+//hello
 document.addEventListener('DOMContentLoaded', () => {
   initDynamicYear();
   initHeroEntrance();
